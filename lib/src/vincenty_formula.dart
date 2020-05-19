@@ -16,7 +16,6 @@ const double polarRadius = 6356752.314245;
 /// 오차값 보정값
 const double epsilon = 1e-12;
 
-/// Direct problem.
 /// [from]부터 [azimuth]방향으로 [distanceM]떨어진 점의 좌표를 계산하여 반환.
 Map<String, double> calculateOffset(
   final double fromLat,
@@ -110,7 +109,6 @@ Map<String, double> calculateOffset(
   return {'latitude': toDegree(targetLat), 'longitude': toDegree(targetLng)};
 }
 
-/// Inverse problem.
 /// 두 점 [p1]과 [p2] 사이의 거리를 미터 단위로 계산하여 반환.
 double calculateDistance(
   final double fromLat,

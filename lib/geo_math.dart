@@ -10,7 +10,8 @@ part 'src/geometry.dart';
 
 part 'src/vincenty_formula.dart';
 
-double getAzimuthBetween(
+/// from 자표 부터 to 좌표 까지의 방위각을 라디안 단위로 반환.
+double getAzimuthBetweenRadian(
   double fromLat,
   double fromLng,
   double toLat,
@@ -21,10 +22,11 @@ double getAzimuthBetween(
   return azimuth < 0 ? azimuth + pi2 : azimuth;
 }
 
-double getAzimuthBetweenDeg(
+/// from 자표 부터 to 좌표 까지의 방위각을 도 단위로 반환.
+double getAzimuthBetweenDegree(
   double fromLat,
   double fromLng,
   double toLat,
   double toLng,
 ) =>
-    toDegree(getAzimuthBetween(fromLat, fromLng, toLat, toLng));
+    toDegree(getAzimuthBetweenRadian(fromLat, fromLng, toLat, toLng));

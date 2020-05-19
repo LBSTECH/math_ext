@@ -1,12 +1,14 @@
 part of geo_math;
 
-/// 평면상의 기하 연산.
+// 평면상의 기하 연산.
 
 const double pi2 = pi * 2;
 const double piDiv2 = pi / 2;
 
+/// [degree]를 라디안 단위로 변환.
 double toRadian(double degree) => degree * (pi / 180);
 
+/// [radian]을 도 단위로 변환.
 double toDegree(double radian) => radian * (180 / pi);
 
 /// 도 단위의 [azimuth]를 시계방향 각을 계산하여 시(1시, 2시) 방향 반환.

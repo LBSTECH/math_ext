@@ -1,5 +1,7 @@
 part of geo_math;
 
+// dart:math 패키지에 없는 간단한 math 함수
+
 /// [value]를 [minimum]이상 [maximum]이하로 제한하여 반환합니다.
 num clamp(num value, num minimum, num maximum) =>
     max(minimum, min(maximum, value));

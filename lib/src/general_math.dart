@@ -1,3 +1,5 @@
+
+
 part of geo_math;
 
 // dart:math 패키지에 없는 간단한 math 함수

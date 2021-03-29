@@ -1,4 +1,8 @@
-## [1.0.0] - 기본적인 기하연산 작성
+## 1.1.0
+- null safety migration
+
+## 1.0.0
+### 기본적인 기하연산 작성
 **general math**
 - clamp
 - wrap

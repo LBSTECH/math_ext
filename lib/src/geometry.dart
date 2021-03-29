@@ -1,3 +1,5 @@
+
+
 part of geo_math;
 
 // 평면상의 기하 연산.
@@ -23,12 +25,12 @@ int radianToClockPosition(double azimuth) =>
 
 /// 두 벡터[v1], [v2] 사이의 투영 벡터를 계산하여 반환.
 /// [offset]이 주어질 경우 더해서 반환.
-Vector2 getProjectionVectorBetween(Vector2 v1, Vector2 v2, {Vector2 offset}) =>
+Vector2 getProjectionVectorBetween(Vector2 v1, Vector2 v2, {Vector2? offset}) =>
     (v2 * (v1.dot(v2) / v2.dot(v2))) + (offset ?? Vector2.zero());
 
 /// 두 벡터[v1]에서 [v2]에 내린 수선의 벡터를 계산하여 반환.
 /// [offset]이 주어질 경우 더해서 반환.
 Vector2 getPerpendicularVectorBetween(Vector2 v1, Vector2 v2,
-        {Vector2 offset}) =>
+        {Vector2? offset}) =>
     ((v1 - getProjectionVectorBetween(v1, v2)) * -1) +
     (offset ?? Vector2.zero());

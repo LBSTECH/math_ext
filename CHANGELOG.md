@@ -1,5 +1,6 @@
 ## 2.0.0
 - extension 을 이용한 함수 형태 변경
+- 패키지명 변경
 
 ## 1.1.0
 - null safety migration

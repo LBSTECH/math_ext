@@ -105,7 +105,7 @@ extension GeoMathPoint on Point {
   double metricDistanceTo(Point to) {
     final L = toRadian(to.x) - toRadian(x);
     final u1 = atan((1 - _flattening) * tan(toRadian(y)));
-    final u2 = atan((1 - _flattening) * tan(toRadian(to.x)));
+    final u2 = atan((1 - _flattening) * tan(toRadian(to.y)));
     final sinU1 = sin(u1), cosU1 = cos(u1);
     final sinU2 = sin(u2), cosU2 = cos(u2);
 

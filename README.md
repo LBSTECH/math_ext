@@ -1,6 +1,6 @@
-# geo_math
+# math_ext
 
-Geographic math module
+수식 확장 함수 모음
 
 ## Getting Started
 

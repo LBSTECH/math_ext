@@ -1,5 +1,7 @@
 import 'dart:math';
 
+import 'package:vector_math/vector_math.dart';
+
 import 'angle.dart';
 
 const double pi2 = pi * 2;
@@ -24,11 +26,21 @@ extension Vector on Point {
   ]) =>
       offset - (this - projectionVectorTo(point));
 
-  /// from 자표 부터 to 좌표 까지의 방위각을 라디안 단위로 반환.
+  /// from 좌표부터 to 좌표까지의 방위각을 라디안 단위로 반환.
   double azimuthRadianTo(Point to) {
-    final theta = atan2(to.y - y, to.x - x);
-    final azimuth = piDiv2 - theta;
-    return azimuth < 0 ? azimuth + pi2 : azimuth;
+    var startLongitudeRadians = radians(x.toDouble());
+    var startLatitudeRadians = radians(y.toDouble());
+    var endLongitudeRadians = radians(to.x.toDouble());
+    var endLatitudeRadians = radians(to.y.toDouble());
+
+    var dY = sin(endLongitudeRadians - startLongitudeRadians) *
+        cos(endLatitudeRadians);
+    var dX = cos(startLatitudeRadians) * sin(endLatitudeRadians) -
+        sin(startLatitudeRadians) *
+            cos(endLatitudeRadians) *
+            cos(endLongitudeRadians - startLongitudeRadians);
+
+    return atan2(dY, dX);
   }
 
   /// from 자표 부터 to 좌표 까지의 방위각을 도 단위로 반환.

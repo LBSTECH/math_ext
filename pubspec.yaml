@@ -1,6 +1,8 @@
 name: math_ext
 description: Geographic math module
 version: 2.0.2
+publish_to: swkim@lbstech.net
+repository: https://github.com/LBSTECH/math_ext
 
 environment:
   sdk: ">=2.14.4 <3.0.0"

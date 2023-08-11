@@ -1,6 +1,6 @@
 name: math_ext
 description: Geographic math module
-version: 2.0.2
+version: 2.0.3
 publisher: swkim@lbstech.net
 repository: https://github.com/LBSTECH/math_ext
 
@@ -8,7 +8,7 @@ environment:
   sdk: ">=2.14.4 <4.0.0"
 
 dependencies:
-  vector_math: ^2.1.2
+  vector_math: ">=2.1.2 <3.0.0"
 
 dev_dependencies:
   lints: ">=1.0.1 <2.0.0"
